@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/15/trunk/ip-messenger/IPMessenger/src/com/ymd/util
+END
+NetUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/66/trunk/ip-messenger/IPMessenger/src/com/ymd/util/NetUtil.java
+END
+GUID.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/22/trunk/ip-messenger/IPMessenger/src/com/ymd/util/GUID.java
+END
+Constants.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/71/trunk/ip-messenger/IPMessenger/src/com/ymd/util/Constants.java
+END
+Util.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/66/trunk/ip-messenger/IPMessenger/src/com/ymd/util/Util.java
+END
+FileUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/68/trunk/ip-messenger/IPMessenger/src/com/ymd/util/FileUtil.java
+END

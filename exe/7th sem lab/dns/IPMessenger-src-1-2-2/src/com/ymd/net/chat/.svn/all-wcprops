@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/18/trunk/ip-messenger/IPMessenger/src/com/ymd/net/chat
+END
+ChatServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/72/trunk/ip-messenger/IPMessenger/src/com/ymd/net/chat/ChatServer.java
+END
+CSSocketHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/64/trunk/ip-messenger/IPMessenger/src/com/ymd/net/chat/CSSocketHandler.java
+END
+ChatClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/72/trunk/ip-messenger/IPMessenger/src/com/ymd/net/chat/ChatClient.java
+END
