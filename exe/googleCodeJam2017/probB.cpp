@@ -81,7 +81,7 @@ if( index == -1){
      tempN = tempN*10+9;
   }
 }else{
-	digit = digit - index-1;
+digit = digit - index-1;
    for(int i=0 ; i<digit ; i++){
     noOfZero = 10*noOfZero;
      tempN = tempN*10+9;
@@ -90,7 +90,6 @@ if( index == -1){
   n--;
   tempN = (n*noOfZero)+tempN;
 }
-
 return tempN;
 }
 
@@ -105,7 +104,6 @@ int digitCount = countDigit(n);
     // anamoly at second last digit and last digit = 0 
    {
     	n= formNumber(n , index , digitCount);
-    	cout <<"       processed no ="<<n<<endl;
     }
 
     return notBruteForceCheck(n);
@@ -113,7 +111,7 @@ int digitCount = countDigit(n);
 }
 
 void readFileInput(){
-	fstream in("probSample.txt") ;
+	fstream in("B-large.in") ;
 	ofstream out("/home/ankitesh/probB_output_incorrect.txt") ;
 
 	if(!in.is_open()){
@@ -133,7 +131,6 @@ void readFileInput(){
 		in >> n;
 	//	result = bruteForceCheck(n);
 	result = notBruteForceCheck(n);
-		cout <<"Case #"<<ct<<": "<<result<<endl;
 		out <<"Case #"<<ct<<": "<<result<<endl;
 		ct++;
 	}
