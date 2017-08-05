@@ -63,14 +63,12 @@ if(p1->x[0] == p1->x[1]){
 }
 }
 
-void processThePoints(struct point *p1,struct point *p2){
-sortPoints(p1);
-sortPoints(p2);
-
-}
-
 void calXaxis(struct point *p1,struct point *p2){
-if(p1->y[1] > p2->y[0]){
+
+//parallel case
+if(p1->x[0] != p2->x[0]){
+cout<<"no\n";
+}else if(p1->y[1] >= p2->y[0] ){
  cout <<"yes\n";
   }else{
   cout<<"no\n";
@@ -78,7 +76,11 @@ if(p1->y[1] > p2->y[0]){
 }
 
 void calYaxis(struct point *p1,struct point *p2){
- if(p1->x[1] > p2->x[0]){
+
+//parallel case
+if(p1->y[0] != p2->y[0]){
+cout<<"no\n";
+}else  if(p1->x[1] >= p2->x[0]){
  cout <<"yes\n";
   }else{
   cout<<"no\n";
@@ -86,7 +88,7 @@ void calYaxis(struct point *p1,struct point *p2){
 }
 void calXYaxis(struct point *p1,struct point *p2){
 
-if((p1->x[0] == p2->x[1]) || (p1->x[1] == p2->x[0])){
+if((p1->x[0] == p2->x[1]) || (p1->x[1] == p2->x[0]) || (p1->x[0] == p2->x[0]) || (p1->x[1] == p2->x[1])){
  cout <<"yes\n";
   }else{
   cout<<"no\n";
@@ -106,16 +108,18 @@ cin>>p1->x[0]>>p1->y[0]>>p1->x[1]>>p1->y[1]>>p2->x[0]>>p2->y[0]>>p2->x[1]>>p2->y
 sortPoints(p1);
 sortPoints(p2);
 
-
-
 if(p1->axis == p1->axis){
+
+
    if(p1->axis =='y'){
+//cout<<"y axis";
     if(p1->x[0] > p2->x[0]){
        struct point *temp = p1;
        p1 = p2;
        p2 = temp;
     }
    }else{
+   //cout<<"X axis";
    if(p1->y[0] > p2->y[0]){
        struct point *temp = p1;
        p1 = p2;

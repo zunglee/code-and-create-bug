@@ -38,98 +38,48 @@ using namespace std;
 #define pn() printf("\n")
 #define _p() printf(" ")
 
-void calVaildInValid(int len){
-
-int flag = 1; //1 valid
-if(len%2 == 0){
-flag = 0;
+void calAns(){
+int N,M;
+cin>>N>>M;
+long long unsigned C[N],D[M],E;
+cin>>E;
+for(int i=0;i<N;i++){
+cin>>C[i];
 }
 
-int x;
-int intArr[(len/2)-1];
-
-int ct = 0;
-for(int i=0 ; i<len ; i++){
-
-cin>>x;
-if(i ==0 && x!=1){
-flag =0 ;
+for(int i=0;i<M;i++){
+cin>>D[i];
 }
 
-    if(i <= len/2){
-    //cout<<"\ndone\n";
-          intArr[i] = x;
-          if((ct+1) == x){
-    //cout <<"\nhere yo yo\n";
-           flag = 0;
-          }
-            ct = x;
-    }else{
-       if(intArr[len-i-1] != x){
-           flag = 0;
-    //cout <<"\nafasdf\n";
-       }
-    }
+sort(C,C+N);
+sort(D,D+M);
+
+long long unsigned ans;
+ans =maxMatching(C, D, E);
+
+
+for(long long unsigned x = -2000000000; x <2000000000 ; x++){
+   if(abs(C[0]-D[M-1] > E)){
+        break;
+   }
+
+   for(int i=0 ; i <N;i++ ){
+      C[i] +=x;
+   }
+   ans =max(ans, maxMatching(C, D, E));
 }
 
-if(flag){
-cout<<"yes\n";
-}else{
-cout<<"no\n";
-}
-
-}
-
-void calVaildInValid2(int len){
- if(len%2 == 0){
- cout<<"no\n";
- return;
- }
- int arr[len];
- int mid = len/2;
- int ct = 1;
- for(int i=0 ; i<len ; i++){
-  if(i<= mid){
-arr[i] = ct++;
-  }else{
-  arr[i] = ct--;
-  }
-
-if(i== mid){
-ct = ct-2;
-}
- }
-
-int x;
-int flag =1 ;
-for(int i=0 ; i<len ; i++){
-    cin>>x;
-    if(arr[i] !=x){
-    flag = 0;
-    }
-
-}
-
-if(flag){
-cout<<"yes\n";
-}else{
-cout<<"no\n";
-}
-
-
+cout<<ans<<endl;
 
 }
 
 
 int main() {
-int t ;
-int len;
-cin>>t;
-while(t--){
-cin>>len;
-calVaildInValid(len);
-//calVaildInValid2(len);
-}
 
+int t;
+cin >> t;
+while(t--){
+     calAns();
+}
 	return 0;
 }
