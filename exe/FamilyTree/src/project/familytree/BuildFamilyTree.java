@@ -21,7 +21,7 @@ public class BuildFamilyTree {
     	
     	String line = reader.readLine();
     	while(line != null) {
-    		System.out.println(line);
+    		//System.out.println(line);
     		this.createFamilyTree(line);
     		line = reader.readLine();
     		

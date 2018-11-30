@@ -13,8 +13,8 @@ public class FamilyTree {
 		Scanner sc = new Scanner(System.in);
 		// inputFamilyTree = sc.nextLine();
 		// queryFamilyTree = sc.nextLine();
-		inputFamilyTree = "/home/ankitesh/Downloads/Project4_Skeleton/Project4_Skeleton/files/in/input1.txt";
-		queryFamilyTree = "/home/ankitesh/Downloads/Project4_Skeleton/Project4_Skeleton/files/in/query1.txt";
+		inputFamilyTree = "/home/ankitesh/Downloads/Project4_Skeleton/Project4_Skeleton/files/in/input5.txt";
+		queryFamilyTree = "/home/ankitesh/Downloads/Project4_Skeleton/Project4_Skeleton/files/in/query5.txt";
 		FamilyTree fT = new FamilyTree();
 		try {
 			fT.buildFamilyTree(inputFamilyTree);
@@ -49,7 +49,6 @@ public class FamilyTree {
 	public void buildFamilyTree(String familyFile) throws Exception {
 		BuildFamilyTree bft = new BuildFamilyTree(this.nameList);
 		this.nameList = bft.buildFamilyTree(familyFile);
-		System.out.println("YES");
 	}
 
 	/**
