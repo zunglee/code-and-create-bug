@@ -1,5 +1,6 @@
 package project.familytree;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -10,6 +11,7 @@ public class HumanEntity {
 	public String father;
 	public String mother;
 	public HashMap<String,String[]> relation;
+	public HashMap<Integer, ArrayList<String>> ancestorList = new HashMap<Integer, ArrayList<String>>() ;
 	
 	public HumanEntity() {
 		this.relation = new HashMap<>();
